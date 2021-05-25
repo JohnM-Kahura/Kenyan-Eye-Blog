@@ -1,0 +1,22 @@
+.django-ckeditor-widget {
+    width: 100%;
+}
+p{
+      margin-top: 1rem;
+      justify-content: end;
+      
+    }
+    body{
+      margin: 0;
+      background-color: rgb(85, 161, 85);
+      background-image: url(https://image.freepik.com/free-photo/kenya-flag-made-metallic-brush-paint-grunge-dark-wall_1379-2487.jpg);
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+    ::-webkit-scrollbar{
+        width: 12px;
+      }
+      ::-webkit-scrollbar-thumb{
+        background: gray;
+        border-radius: 6px;
+      }

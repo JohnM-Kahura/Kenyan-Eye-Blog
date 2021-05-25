@@ -1,0 +1,38 @@
+{% load tailwind_filters %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+
+    <title>Log In</title>
+</head>
+<body>
+    <div class="max-w-lg mx-auto">
+            <form    method="POST">
+                {% csrf_token %}
+                {{ form|crispy }}
+                <button type="submit"class='w-full bg-green-500 text-white hover:bg-green-900 px-3 py-3 rounded-md'>Log In</button>
+            </form>
+        <div class="flex">
+            <div class="mt-4 flex-auto">
+                Don't have an account ? 
+                <a class="text-blue-500 hover:text-blue-700 underline" href=" {% url 'signup' %} ">Sign up</a>
+            </div>
+            <div class="mt-4 ml-6 flex-auto">
+                
+                <a class="text-blue-500 hover:text-blue-700 underline" href=" {% url 'reset_password' %} ">Forgot password?</a>
+            </div>
+            
+        </div>
+        {% for message in messages  %}
+        <div class="h-auto bg-gray-100">
+              <p class="font-semibold text-4xl text-gray-800">{{message}}</p>
+            </div>
+              {% endfor %}
+    </div>
+    
+</body>
+</html

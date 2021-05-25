@@ -1,0 +1,48 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+    p{
+      margin-top: 1rem;
+      justify-content: end;
+      
+    }
+    body{
+      margin: 0;
+      background-color: rgb(85, 161, 85);
+      background-image: url(https://image.freepik.com/free-photo/kenya-flag-made-metallic-brush-paint-grunge-dark-wall_1379-2487.jpg);
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+    ::-webkit-scrollbar{
+        width: 12px;
+      }
+      ::-webkit-scrollbar-thumb{
+        background: gray;
+        border-radius: 6px;
+      }
+
+  </style>
+  
+  <title>Document</title>
+</head>
+<body>
+  
+<div class="h-screen   ">
+  <div
+    class=" h-screen overflow-hidden overflow-y-scroll max-w-screen-md	 p-12 mx-auto text-gray-700 bg-white rounded shadow-xl sm: max-w-auto mx-auto"
+  >
+    <h1 class="text-4xl font-bold leading-8 text-center text-gray-800">
+      The Despots
+    </h1>
+    {{blog.blog |safe }}
+    
+  </div>
+</div>
+</body>
+</html>
